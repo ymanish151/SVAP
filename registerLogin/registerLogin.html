@@ -18,7 +18,7 @@
             <button id="login-toggle" onclick="toggleLogin()">log in</button>
             <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
         </div>
-    
+        
         <div id="login-form">
             <form>
                 <input type="text" placeholder="Enter email or username"/>
@@ -27,7 +27,7 @@
                 <p><a href="javascript:void(0)">Forgotten account</a></p>
                 <hr/>
                 <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> google</button>
-                <button type="button" class="btn -box-sd-effect"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i> facebook</button>
+                <button type="button" class="btn -box-sd-effect" onclick="fbLogin()" id="fbLink"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i> facebook</button>
             </form>
         </div>
     
@@ -84,14 +84,16 @@
                 <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
                 <hr/>
                 <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> google</button>
-                <button type="button" class="btn -box-sd-effect"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i> facebook</button>
+                <button type="button" class="btn -box-sd-effect" onclick="fbLogin()" id="fbLink"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i> facebook</button>
             </form>
             <!-- <i class="fab fa-facebook-f"></i> -->
         </div>
-    
+        <div id="status"></div>
+        <div id="userData"></div>
     </div>
     
     <script type="text/javascript" src="./assets/js/registerLogin.js"></script>
+    
 </body>
 
 </html>
