@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic-Tac-Toe</title>
+ 
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome.css">
+    <link rel="stylesheet" href="./game.css">
+    
+    
+</head>
+<body>
+    <div class='game main-container'>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Select "X" or "O"</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Selection buttons -->
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary active" id="label1"><input type="radio" name="options" id="option1" autocomplete="off" checked value="X">X</label>
+                  <label class="btn btn-primary" id="label2"><input type="radio" name="options" id="option2" autocomplete="off" value="O">O</label>
+                </div>
+      
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="save">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class='board'>
+          <!-- data-indx following cell divs represents cell index in 1D array representation -->
+          <div class='cell' data-indx="0"></div>
+          <div class='cell' data-indx="1"></div>
+          <div class='cell' data-indx="2"></div>
+          <div class='cell' data-indx="3"></div>
+          <div class='cell' data-indx="4"></div>
+          <div class='cell' data-indx="5"></div>
+          <div class='cell' data-indx="6"></div>
+          <div class='cell' data-indx="7"></div>
+          <div class='cell' data-indx="8"></div>
+        </div>
+      
+        <div class='control'>
+          <!-- div.intial displays the starting controls -->
+          <div class='intial'>
+            <div class='difficulty'>
+              <span class='level not-selected' id="easy">Easy</span>
+              <span class='level not-selected' id="medium">Medium</span>
+              <span class='level not-selected' id="impossible">Impossible</span>
+            </div>
+      
+            <div class='start'> Start </div>
+          </div>
+      
+          <!-- div.ingame displays in-game messages and controls -->
+          <div class='ingame' id="human">It's your turn ...</div>
+          <div class='ingame' id="ai">
+              <p>Waint for it ...</p>
+          </div>
+          <div class='ingame' id="won">You won !</div>
+          <div class='ingame' id="lost">You lost !</div>
+          <div class='ingame' id="draw">It's a Draw</div>
+        </div>
+      </div>
+      <script type="text/javascript" src="./assets/jquery.js"></script>
+    <script type="text/javascript" src="./assets/bootstrap.js"></script>
+      <script type="text/javascript" src="./game.js"></script>
+</body>
+
+</html>
